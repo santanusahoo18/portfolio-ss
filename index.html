@@ -268,15 +268,20 @@
       </button>
     </div>
 
-    <!-- ====== MOBILE MENU ====== -->
+    <!-- ====== MOBILE MENU - WITH BORDER ====== -->
     <ul id="sidemenu"
-      class="flex md:hidden flex-col py-20 px-10 fixed top-0 right-[-16rem] h-screen w-64 z-50 transition-all duration-500 ease-in-out gap-6 shadow-lg rounded-lg">
-      <div class="flex justify-between items-center mb-6">
-        <span></span>
-        <div class="cursor-pointer" onclick="closemenu()">
-          <img src="multiply-mathematical-sign.png" alt="" class="hidden dark:block w-6 h-6">
-          <img src="cross.png" alt="" class="w-6 h-6 dark:hidden">
-        </div>
+      class="flex md:hidden flex-col py-20 px-10 fixed top-0 right-[-16rem] h-screen w-64 z-50 transition-all duration-500 ease-in-out gap-6 shadow-lg rounded-lg border-2"
+      style="background-color: white; color: #111827; border-color: #e5e7eb;"
+      data-dark-bg="#11001f"
+      data-dark-text="#ffffff"
+      data-dark-border="rgba(255, 255, 255, 0.3)">
+      <div class="flex justify-end items-center mb-6">
+        <button onclick="closemenu()" class="group relative px-5 py-2.5 rounded-lg border-2 border-blue-600 dark:border-yellow-400 bg-transparent hover:bg-blue-600 dark:hover:bg-yellow-400 text-blue-600 dark:text-yellow-400 hover:text-white dark:hover:text-gray-900 font-semibold transition-all duration-300 flex items-center gap-2.5 shadow-sm hover:shadow-md">
+          <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+          <span class="text-sm tracking-wide">Back</span>
+        </button>
       </div>
       <li><a href="#home" onclick="showSection('home')"
           class="hover:text-blue-600 dark:hover:text-yellow-300 transition">Home</a></li>
@@ -289,7 +294,7 @@
     </ul>
   </nav>
 
-  <!-- ====== HOME SECTION ====== -->
+  <!-- REST OF THE HTML CONTENT REMAINS THE SAME -->
   <section id="home" class="section pt-20 text-center">
     <img src="ss-3.jpg" alt="Santanu Photo" class="rounded-full w-32 mx-auto mt-20 shadow-lg float-animation" />
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-6 tracking-tight">Hi, I'm <span class="gradient-text">Santanu Sahoo</span></h1>
@@ -299,14 +304,11 @@
     </p>
   </section>
 
-  <!-- ====== ABOUT SECTION ====== -->
   <section id="about" class="section hidden w-full px-[12%] py-20 scroll-mt-20">
     <h2 class="text-center text-4xl md:text-5xl mb-10 font-extrabold tracking-tight animate-on-scroll">About <span class="text-blue-600 dark:text-yellow-400">Me</span></h2>
     <div class="flex flex-col lg:flex-row items-center gap-20 mb-16">
       <div class="max-w-max mx-auto relative animate-on-scroll">
-        <!-- Light mode image -->
         <img src="white.jpeg" alt="Santanu Sahoo" class="w-64 sm:w-80 rounded-3xl max-w-none shadow-lg dark:hidden" />
-        <!-- Dark mode image -->
         <img src="purple.jpeg" alt="Santanu Sahoo" class="w-64 sm:w-80 rounded-3xl max-w-none shadow-lg hidden dark:block" />
       </div>
       <div class="flex-1 text-center lg:text-left animate-on-scroll">
@@ -329,16 +331,13 @@
       </div>
     </div>
 
-    <!-- ====== PROJECTS SECTION ====== -->
     <div class="mt-20">
       <h3 class="text-center text-3xl md:text-4xl mb-12 font-bold tracking-tight animate-on-scroll">
         My <span class="text-blue-600 dark:text-yellow-400">Machine Learning Projects</span>
       </h3>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        
-        <!-- Project 1: House Price Prediction -->
-        <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden animate-on-scroll stagger-1">
+        <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden animate-on-scroll stagger-1 border-2" style="background-color: white; border-color: #e5e7eb;">
           <div class="h-48 overflow-hidden">
             <img src="house_price.jpeg" alt="House Price Prediction" class="w-full h-full object-cover">
           </div>
@@ -356,14 +355,10 @@
             </a>
           </div>
         </div>
-
-       
-
       </div>
     </div>
   </section>
 
-  <!-- ====== SKILLS SECTION ====== -->
   <section id="skills" class="section hidden w-full px-[12%] py-20 scroll-mt-20 transition-colors duration-700">
     <h2 class="text-center text-4xl md:text-5xl mb-4 font-extrabold text-gray-900 dark:text-white tracking-tight animate-on-scroll">
       Technical <span class="text-blue-600 dark:text-yellow-400">Expertise</span>
@@ -372,19 +367,14 @@
       Specialized in Data Science and Machine Learning with strong foundations in modern web development
     </p>
 
-    <!-- Skills Categories -->
     <div class="max-w-6xl mx-auto space-y-12">
-      
-      <!-- Data Science & ML Skills -->
       <div class="animate-on-scroll">
         <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white flex items-center gap-3">
           <span class="w-2 h-8 bg-blue-600 dark:bg-yellow-400 rounded-full"></span>
           Data Science & Machine Learning
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- Python -->
-          <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #eff6ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Python</h4>
               <span class="text-sm font-medium text-blue-600 dark:text-yellow-400">Advanced</span>
@@ -394,9 +384,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">NumPy, Pandas, Scikit-learn, TensorFlow</p>
           </div>
-
-          <!-- Machine Learning -->
-          <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #eff6ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Machine Learning</h4>
               <span class="text-sm font-medium text-blue-600 dark:text-yellow-400">Intermediate</span>
@@ -406,9 +394,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Regression, Classification, Neural Networks</p>
           </div>
-
-          <!-- Data Visualization -->
-          <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #eff6ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Data Visualization</h4>
               <span class="text-sm font-medium text-blue-600 dark:text-yellow-400">Advanced</span>
@@ -418,9 +404,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Matplotlib, Seaborn, Plotly, Power BI</p>
           </div>
-
-          <!-- SQL & Databases -->
-          <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #eff6ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">SQL & Databases</h4>
               <span class="text-sm font-medium text-blue-600 dark:text-yellow-400">Intermediate</span>
@@ -430,20 +414,16 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">MySQL, PostgreSQL, Data Querying & Management</p>
           </div>
-
         </div>
       </div>
 
-      <!-- Frontend Development Skills -->
       <div class="animate-on-scroll">
         <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white flex items-center gap-3">
           <span class="w-2 h-8 bg-purple-600 dark:bg-orange-400 rounded-full"></span>
           Frontend Development
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- HTML & CSS -->
-          <div class="bg-gradient-to-br from-purple-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #faf5ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">HTML & CSS</h4>
               <span class="text-sm font-medium text-purple-600 dark:text-orange-400">Intermediate</span>
@@ -453,9 +433,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Responsive Design, Flexbox, Grid Layout</p>
           </div>
-
-          <!-- JavaScript -->
-          <div class="bg-gradient-to-br from-purple-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #faf5ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">JavaScript</h4>
               <span class="text-sm font-medium text-purple-600 dark:text-orange-400">Intermediate</span>
@@ -465,9 +443,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">ES6+, DOM Manipulation, Event Handling</p>
           </div>
-
-          <!-- TailwindCSS -->
-          <div class="bg-gradient-to-br from-purple-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #faf5ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">TailwindCSS</h4>
               <span class="text-sm font-medium text-purple-600 dark:text-orange-400">Advanced</span>
@@ -477,9 +453,7 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Utility-First CSS, Modern UI Components</p>
           </div>
-
-          <!-- Git & Version Control -->
-          <div class="bg-gradient-to-br from-purple-50 to-white dark:from-gray-800 dark:to-gray-850 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover">
+          <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 card-hover" style="background: linear-gradient(to bottom right, #faf5ff, white);">
             <div class="flex items-center justify-between mb-4">
               <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Git & Version Control</h4>
               <span class="text-sm font-medium text-purple-600 dark:text-orange-400">Intermediate</span>
@@ -489,65 +463,52 @@
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">GitHub, Collaboration, Code Management</p>
           </div>
-
         </div>
       </div>
 
-      <!-- Tools & Technologies -->
       <div class="animate-on-scroll">
         <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white flex items-center gap-3">
           <span class="w-2 h-8 bg-green-600 dark:bg-cyan-400 rounded-full"></span>
           Tools & Technologies
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">🐍</div>
             <p class="font-medium text-gray-800 dark:text-white">Python</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">📊</div>
             <p class="font-medium text-gray-800 dark:text-white">Jupyter</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">📈</div>
             <p class="font-medium text-gray-800 dark:text-white">Power BI</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">🗄️</div>
             <p class="font-medium text-gray-800 dark:text-white">MySQL</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">🌐</div>
             <p class="font-medium text-gray-800 dark:text-white">VS Code</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">🎨</div>
             <p class="font-medium text-gray-800 dark:text-white">Figma</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">📝</div>
             <p class="font-medium text-gray-800 dark:text-white">NumPy</p>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover">
+          <div class="bg-white p-4 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-center hover:border-green-500 dark:hover:border-cyan-400 transition-all duration-300 card-hover" style="background-color: white;">
             <div class="text-2xl mb-2">🐼</div>
             <p class="font-medium text-gray-800 dark:text-white">Pandas</p>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ====== CONTACT SECTION ====== -->
   <section id="contact"
     class="section w-full px-[12%] py-20 scroll-mt-20 bg-[url('./photo/bg.png')] bg-no-repeat bg-[length:90%_auto] bg-center">
     <h4 class="text-center mb-2 text-lg font-medium text-gray-600 dark:text-gray-300 animate-on-scroll">Connect with me</h4>
@@ -572,7 +533,6 @@
     </form>
   </section>
 
-  <!-- ====== FOOTER ====== -->
   <div class="mt-20 animate-on-scroll">
     <div class="text-center">
       <div class="w-max flex items-center gap-2 mx-auto">
@@ -593,52 +553,153 @@
 
   <script src="script.js"></script>
   <script>
+    // Function to update mobile menu colors based on theme
+    function updateMobileMenuTheme() {
+      const sidemenu = document.getElementById('sidemenu');
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+      
+      if (isDark) {
+        sidemenu.style.backgroundColor = '#11001f'; // darkThem color
+        sidemenu.style.color = '#ffffff';
+        sidemenu.style.borderColor = 'rgba(255, 255, 255, 0.3)'; // Light border in dark mode
+      } else {
+        sidemenu.style.backgroundColor = 'white';
+        sidemenu.style.color = '#111827';
+        sidemenu.style.borderColor = '#e5e7eb'; // Gray border in light mode
+      }
+    }
+
+    // Function to update skill card backgrounds based on theme
+    function updateSkillCardsTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+      
+      // Get all skill cards
+      const dataCards = document.querySelectorAll('.bg-gradient-to-br.from-blue-50, .bg-gradient-to-br.from-purple-50');
+      const toolCards = document.querySelectorAll('.bg-white[style*="background-color"]');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      if (isDark) {
+        // Update Data Science and Frontend cards to darkThem
+        dataCards.forEach(card => {
+          card.style.background = 'linear-gradient(to bottom right, #11001f, #1a0033)';
+        });
+        // Update Tools cards to darkThem
+        toolCards.forEach(card => {
+          card.style.backgroundColor = '#11001f';
+        });
+        // Update Project cards to darkThem with border
+        projectCards.forEach(card => {
+          card.style.backgroundColor = '#11001f';
+          card.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+        });
+      } else {
+        // Reset to light mode gradients
+        dataCards.forEach(card => {
+          if (card.classList.contains('from-blue-50')) {
+            card.style.background = 'linear-gradient(to bottom right, #eff6ff, white)';
+          } else if (card.classList.contains('from-purple-50')) {
+            card.style.background = 'linear-gradient(to bottom right, #faf5ff, white)';
+          }
+        });
+        // Reset Tools cards to white
+        toolCards.forEach(card => {
+          card.style.backgroundColor = 'white';
+        });
+        // Reset Project cards to white with gray border
+        projectCards.forEach(card => {
+          card.style.backgroundColor = 'white';
+          card.style.borderColor = '#e5e7eb';
+        });
+      }
+    }
+
+    // Update on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateMobileMenuTheme();
+      updateSkillCardsTheme();
+      
+      // Watch for theme changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'class') {
+            updateMobileMenuTheme();
+            updateSkillCardsTheme();
+            
+            // Also update navbar if scrolled
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (currentScroll > 50) {
+              if (isDark) {
+                nav.style.backgroundColor = 'rgba(17, 0, 31, 0.95)'; // darkThem
+              } else {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // white
+              }
+            }
+          }
+        });
+      });
+      
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+    });
+
     // Scroll animation observer
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const scrollObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animated');
           
-          // FIXED: Animate skill bars when skills section comes into view
           if (entry.target.closest('#skills') || entry.target.id === 'skills') {
             const skillBars = document.querySelectorAll('#skills .skill-bar');
             skillBars.forEach((bar, index) => {
               setTimeout(() => {
                 bar.classList.add('animate');
-              }, index * 100); // Stagger the animations
+              }, index * 100);
             });
           }
         }
       });
     }, observerOptions);
 
-    // Observe all elements with animate-on-scroll class
     document.addEventListener('DOMContentLoaded', () => {
       const animateElements = document.querySelectorAll('.animate-on-scroll');
-      animateElements.forEach(el => observer.observe(el));
+      animateElements.forEach(el => scrollObserver.observe(el));
       
-      // Also observe the skills section itself
       const skillsSection = document.querySelector('#skills');
       if (skillsSection) {
-        observer.observe(skillsSection);
+        scrollObserver.observe(skillsSection);
       }
     });
 
-    // Smooth navbar background on scroll
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
       const currentScroll = window.pageYOffset;
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
       
       if (currentScroll > 50) {
-        nav.classList.add('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-md');
+        nav.classList.add('backdrop-blur-md', 'shadow-md');
+        if (isDark) {
+          nav.style.backgroundColor = 'rgba(17, 0, 31, 0.95)'; // darkThem with opacity
+        } else {
+          nav.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // white with opacity
+        }
       } else {
-        nav.classList.remove('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-md');
+        nav.classList.remove('backdrop-blur-md', 'shadow-md');
+        nav.style.backgroundColor = 'transparent';
       }
       
       lastScroll = currentScroll;
